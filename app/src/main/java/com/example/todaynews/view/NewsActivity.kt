@@ -36,12 +36,12 @@ class NewsActivity : AppCompatActivity() {
     private fun render(appState: AppState) {
         when (appState) {
             is AppState.SuccessLoadNews -> {
-                setLoading(false)
                 newsAdapter.setData(appState.news)
+                setLoading(false)
             }
             is AppState.ErrorLoadNews -> {
-                setLoading(false)
                 setToast(appState.errorMessage)
+                setLoading(false)
             }
             is AppState.Loading -> {
                 setLoading(true)

@@ -21,6 +21,7 @@ class NewsViewModel(
     }
 
     fun getAndroidNews() {
+        liveData.value = AppState.Loading
         newsRepository.getAndroidNews(DateConverter.getTodayDateForApi())
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -32,6 +33,7 @@ class NewsViewModel(
     }
 
     fun getIosNews() {
+        liveData.value = AppState.Loading
         newsRepository.getIosNews(DateConverter.getTodayDateForApi())
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
@@ -43,6 +45,7 @@ class NewsViewModel(
     }
 
     fun getItNews() {
+        liveData.value = AppState.Loading
         newsRepository.getItNews(DateConverter.getTodayDateForApi())
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
