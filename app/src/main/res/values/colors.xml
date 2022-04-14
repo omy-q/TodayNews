@@ -7,4 +7,20 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+    <color name="main_background">#FFFBFBFB</color>
+
+    <color name="action_bar_background">#39BDC9</color>
+    <color name="action_bar_text">#C1F7FD</color>
+
+    <color name="chips_background_active">#D9028085</color>
+    <color name="chips_background_disable">#D984FFFF</color>
+    <color name="chips_text_active">#006064</color>
+    <color name="chips_text_disable">#60AFAF</color>
+
+    <color name="card_view_background">#F1FEFF</color>
+    <color name="card_view_text">#006064</color>
+    <color name="card_view_text_date">#317477</color>
+
+
 </resources>

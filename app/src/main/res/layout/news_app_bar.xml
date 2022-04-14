@@ -1,55 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.google.android.material.appbar.AppBarLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/AppbarView"
     android:layout_width="match_parent"
-    android:layout_height="100dp"
-    style="@style/AppbarView">
+    android:layout_height="100dp">
 
-    <Toolbar
+    <androidx.appcompat.widget.Toolbar
         android:id="@+id/newsToolbar"
+        style="@style/ToolbarView"
         android:layout_width="match_parent"
-        android:layout_height="?actionBarSize"
-        style="@style/ToolbarView">
+        android:layout_height="?actionBarSize">
 
         <TextView
+            style="@style/ToolbarView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="start"
-            android:text="@string/news_toolbar_title_text"
-            style="@style/ToolbarView"/>
-    </Toolbar>
+            android:text="@string/news_toolbar_title_text" />
+    </androidx.appcompat.widget.Toolbar>
 
     <com.google.android.material.chip.ChipGroup
         android:id="@+id/chipsGroup"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="16dp"
-        app:singleSelection="true"
         app:selectionRequired="true"
-        app:singleLine="true">
+        app:singleLine="true"
+        app:singleSelection="true">
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipAndroid"
+            style="@style/ChipView"
             android:layout_width="@dimen/chip_width"
             android:layout_height="wrap_content"
             android:checked="true"
-            android:text="@string/chip_android"
-            style="@style/ChipView"/>
+            android:text="@string/chip_android" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipIos"
+            style="@style/ChipView"
             android:layout_width="@dimen/chip_width"
             android:layout_height="wrap_content"
-            android:text="@string/chip_ios"
-            style="@style/ChipView"/>
+            android:text="@string/chip_ios" />
 
         <com.google.android.material.chip.Chip
             android:id="@+id/chipIt"
+            style="@style/ChipView"
             android:layout_width="@dimen/chip_width"
             android:layout_height="wrap_content"
-            android:text="@string/chip_it"
-            style="@style/ChipView"/>
+            android:text="@string/chip_it" />
 
     </com.google.android.material.chip.ChipGroup>
 

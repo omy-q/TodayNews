@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    style="@style/NewsCardView"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_marginBottom="8dp"
-    style="@style/NewsCardView">
+    android:layout_marginBottom="8dp">
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -13,48 +13,47 @@
 
         <TextView
             android:id="@+id/newsSource"
+            style="@style/NewsDescription"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
-            android:text="source"
-            style="@style/NewsDescription"
-            />
+            android:text="source" />
 
         <TextView
             android:id="@+id/newsPublishedDate"
+            style="@style/NewsDate"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="2dp"
-            android:text="date"
-            style="@style/NewsDate"/>
+            android:text="date" />
 
         <ImageView
             android:id="@+id/newsImage"
             android:layout_width="@dimen/news_image_size"
             android:layout_height="@dimen/news_image_size"
-            android:scaleType="centerCrop"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="2dp"
-            android:contentDescription="@string/image_news_description" />
+            android:contentDescription="@string/image_news_description"
+            android:scaleType="centerCrop" />
 
         <TextView
             android:id="@+id/newsTitle"
+            style="@style/NewsTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="2dp"
-            android:text="Title"
-            style="@style/NewsTitle"/>
+            android:gravity="center_horizontal"
+            android:text="Title" />
 
         <TextView
             android:id="@+id/newsDescription"
+            style="@style/NewsDescription"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:layout_gravity="center_horizontal"
-            android:text="Description"
-            style="@style/NewsDescription"/>
+            android:gravity="center_horizontal"
+            android:text="Description" />
 
     </LinearLayout>
 
