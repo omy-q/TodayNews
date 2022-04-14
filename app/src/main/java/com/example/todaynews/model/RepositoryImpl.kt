@@ -8,14 +8,14 @@ class RepositoryImpl(
 ) : Repository {
 
     override fun getAndroidNews(date: String): Single<NewsData> {
-        return remoteSource.getTodayAndroidNews(date)
+        return remoteSource.getTodayAndroidNews(todayDate = date)
     }
 
     override fun getIosNews(date: String): Single<NewsData> {
-        return remoteSource.getTodayIosNews(date)
+        return remoteSource.getTodayIosNews(todayDate = date)
     }
 
     override fun getItNews(date: String): Single<NewsData> {
-        return remoteSource.getTodayItNews(date)
+        return remoteSource.getTodayItNews(todayDate = date)
     }
 }

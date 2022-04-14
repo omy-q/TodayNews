@@ -14,18 +14,24 @@ interface ApiRemoteSource {
         private const val API_KEY = "0950bd626c2840b8b13cd5b9b8bd7643"
     }
 
-    @GET("/everything?q=$ANDROID_THEME&apiKey=$API_KEY")
+    @GET("everything")
     fun getTodayAndroidNews(
+        @Query("apiKey") apiKey: String = API_KEY,
+        @Query("q") theme: String = ANDROID_THEME,
         @Query("from") todayDate: String
     ): Single<NewsData>
 
-    @GET("/everything?q=$IOS_THEME&apiKey=$API_KEY")
+    @GET("/everything")
     fun getTodayIosNews(
+        @Query("apiKey") apiKey: String = API_KEY,
+        @Query("q") theme: String = IOS_THEME,
         @Query("from") todayDate: String
     ): Single<NewsData>
 
-    @GET("/everything?q=$IT_THEME&apiKey=$API_KEY")
+    @GET("/everything")
     fun getTodayItNews(
+        @Query("apiKey") apiKey: String = API_KEY,
+        @Query("q") theme: String = IT_THEME,
         @Query("from") todayDate: String
     ): Single<NewsData>
 }

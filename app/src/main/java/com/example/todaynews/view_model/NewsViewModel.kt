@@ -15,6 +15,10 @@ class NewsViewModel(
 
     fun getLiveData() = liveData
 
+    fun init(){
+        getAndroidNews()
+    }
+
     fun getAndroidNews() {
         val date = "2022-04-14"
         newsRepository.getAndroidNews(date)

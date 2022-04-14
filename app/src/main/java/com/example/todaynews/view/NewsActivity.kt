@@ -23,6 +23,7 @@ class NewsActivity : AppCompatActivity() {
             render(appState)
         }
         initRecyclerView()
+        viewModel.init()
         setContentView(binding.root)
     }
 
