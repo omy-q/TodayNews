@@ -5,6 +5,7 @@ import androidx.lifecycle.ViewModel
 import com.example.todaynews.model.Repository
 import com.example.todaynews.model.RepositoryImpl
 import com.example.todaynews.model.RetrofitRemoteSource
+import com.example.todaynews.model.converter.DateConverter
 import io.reactivex.rxjava3.android.schedulers.AndroidSchedulers
 import io.reactivex.rxjava3.schedulers.Schedulers
 
@@ -20,8 +21,7 @@ class NewsViewModel(
     }
 
     fun getAndroidNews() {
-        val date = "2022-04-14"
-        newsRepository.getAndroidNews(date)
+        newsRepository.getAndroidNews(DateConverter.getTodayDateForApi())
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ newsData ->
@@ -32,8 +32,7 @@ class NewsViewModel(
     }
 
     fun getIosNews() {
-        val date = "2022-04-14"
-        newsRepository.getIosNews(date)
+        newsRepository.getIosNews(DateConverter.getTodayDateForApi())
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ newsData ->
@@ -44,8 +43,7 @@ class NewsViewModel(
     }
 
     fun getItNews() {
-        val date = "2022-04-14"
-        newsRepository.getItNews(date)
+        newsRepository.getItNews(DateConverter.getTodayDateForApi())
             .subscribeOn(Schedulers.io())
             .observeOn(AndroidSchedulers.mainThread())
             .subscribe({ newsData ->
