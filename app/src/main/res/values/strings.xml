@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">TodayNews</string>
+    <string name="news_toolbar_title_text">TodayNews</string>
+    <string name="chip_android">Android</string>
+    <string name="chip_ios">IOS</string>
+    <string name="chip_it">IT</string>
 </resources>

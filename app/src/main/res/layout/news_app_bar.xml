@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.appbar.AppBarLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <Toolbar
+        android:id="@+id/newsToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:text="@string/news_toolbar_title_text" />
+    </Toolbar>
+
+    <com.google.android.material.chip.ChipGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipAndroid"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chip_android"/>
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipIos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chip_ios" />
+
+        <com.google.android.material.chip.Chip
+            android:id="@+id/chipIt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/chip_it" />
+
+    </com.google.android.material.chip.ChipGroup>
+
+</com.google.android.material.appbar.AppBarLayout>
