@@ -8,7 +8,8 @@ import retrofit2.converter.gson.GsonConverterFactory
 
 object RetrofitRemoteSource {
     private val BASE_URL = "https://newsapi.org/v2"
-    val retrofitSource by lazy {
+
+    private val retrofitSource by lazy {
         getRetrofit().create(ApiRemoteSource::class.java)
     }
 
