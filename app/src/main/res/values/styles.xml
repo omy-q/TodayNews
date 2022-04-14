@@ -32,6 +32,7 @@
 
     <style name="ToolbarView">
         <item name="android:textAppearance">@style/NewsTodayText.Large</item>
+        <item name="android:textSize">18sp</item>
         <item name="android:textColor">@color/action_bar_text</item>
     </style>
 

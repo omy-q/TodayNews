@@ -6,6 +6,7 @@ import android.view.View
 import android.widget.Toast
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.LinearLayoutManager
+import com.example.todaynews.R
 import com.example.todaynews.databinding.ActivityNewsBinding
 import com.example.todaynews.view_model.AppState
 import com.example.todaynews.view_model.NewsViewModel
@@ -19,12 +20,27 @@ class NewsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityNewsBinding.inflate(layoutInflater)
-        viewModel.getLiveData().observe(this) { appState ->
-            render(appState)
-        }
-        initRecyclerView()
-        viewModel.init()
         setContentView(binding.root)
+        viewModel.getLiveData().observe(this) { appState -> render(appState) }
+        initRecyclerView()
+        initChips()
+        viewModel.init()
+    }
+
+    private fun initChips() {
+        binding.newsAppBar.chipsGroup.setOnCheckedChangeListener { _, checkedId ->
+            when (checkedId) {
+                R.id.chipAndroid -> {
+                    viewModel.getAndroidNews()
+                }
+                R.id.chipIos -> {
+                    viewModel.getIosNews()
+                }
+                R.id.chipIt -> {
+                    viewModel.getItNews()
+                }
+            }
+        }
     }
 
     private fun initRecyclerView() {
