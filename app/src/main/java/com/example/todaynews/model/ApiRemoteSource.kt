@@ -21,14 +21,14 @@ interface ApiRemoteSource {
         @Query("from") todayDate: String
     ): Single<NewsData>
 
-    @GET("/everything")
+    @GET("everything")
     fun getTodayIosNews(
         @Query("apiKey") apiKey: String = API_KEY,
         @Query("q") theme: String = IOS_THEME,
         @Query("from") todayDate: String
     ): Single<NewsData>
 
-    @GET("/everything")
+    @GET("everything")
     fun getTodayItNews(
         @Query("apiKey") apiKey: String = API_KEY,
         @Query("q") theme: String = IT_THEME,
