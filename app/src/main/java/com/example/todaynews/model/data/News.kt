@@ -8,6 +8,7 @@ data class Source(
     @SerializedName("name")
     val name: String
 )
+
 data class News(
     @Expose
     @SerializedName("source")
@@ -23,5 +24,10 @@ data class News(
     val imageUrl: String,
     @Expose
     @SerializedName("publishedAt")
-    val publishedDate: String
-)
+    private val publishedDate: String
+) {
+    val date: String
+        get() {
+            return publishedDate.split("T")[0]
+        }
+}

@@ -8,4 +8,9 @@ object DateConverter {
         val converter = SimpleDateFormat("yyyy-MM-dd", Locale.ROOT)
         return converter.format(Date())
     }
+
+    fun getDateForView(date: String): String {
+        return date.split("T")[0]
+    }
+
 }

@@ -9,7 +9,7 @@ class NewsRecyclerHolder(private val binding: ItemNewsBinding) :
     RecyclerView.ViewHolder(binding.root) {
     fun bind(data: News) {
         binding.newsSource.text = data.source.name
-        binding.newsPublishedDate.text = data.publishedDate
+        binding.newsPublishedDate.text = data.date
         binding.newsImage.load(data.imageUrl)
         binding.newsTitle.text = data.title
         binding.newsDescription.text = data.description
