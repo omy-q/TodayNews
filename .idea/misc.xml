@@ -3,9 +3,10 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/android/TodayNews/app/src/main/res/layout/activity_news.xml" value="0.152" />
-        <entry key="..\:/android/TodayNews/app/src/main/res/layout/item_news.xml" value="0.176" />
-        <entry key="..\:/android/TodayNews/app/src/main/res/layout/news_app_bar.xml" value="0.264" />
+        <entry key="..\:/android/TodayNews/app/src/main/res/drawable/selector_chip_background.xml" value="0.19427083333333334" />
+        <entry key="..\:/android/TodayNews/app/src/main/res/layout/activity_news.xml" value="0.2" />
+        <entry key="..\:/android/TodayNews/app/src/main/res/layout/item_news.xml" value="0.264" />
+        <entry key="..\:/android/TodayNews/app/src/main/res/layout/news_app_bar.xml" value="0.2" />
       </map>
     </option>
   </component>

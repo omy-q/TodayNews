@@ -4,4 +4,5 @@
     <string name="chip_android">Android</string>
     <string name="chip_ios">IOS</string>
     <string name="chip_it">IT</string>
+    <string name="image_news_description">news image</string>
 </resources>

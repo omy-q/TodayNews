@@ -1,39 +1,62 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    style="@style/NewsCardView">
 
-    <TextView
-        android:id="@+id/newsSource"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="source"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
 
-    <TextView
-        android:id="@+id/newsPublishedDate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="date"/>
+        <TextView
+            android:id="@+id/newsSource"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="source"
+            style="@style/NewsDescription"
+            />
 
-    <ImageView
-        android:id="@+id/newsImage"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"/>
+        <TextView
+            android:id="@+id/newsPublishedDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="2dp"
+            android:text="date"
+            style="@style/NewsDate"/>
 
-    <TextView
-        android:id="@+id/newsTitle"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Title"/>
+        <ImageView
+            android:id="@+id/newsImage"
+            android:layout_width="@dimen/news_image_size"
+            android:layout_height="@dimen/news_image_size"
+            android:scaleType="centerCrop"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="2dp"
+            android:contentDescription="@string/image_news_description" />
 
-    <TextView
-        android:id="@+id/newsDescription"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:text="Description"/>
+        <TextView
+            android:id="@+id/newsTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="2dp"
+            android:text="Title"
+            style="@style/NewsTitle"/>
 
-</LinearLayout>
+        <TextView
+            android:id="@+id/newsDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:layout_gravity="center_horizontal"
+            android:text="Description"
+            style="@style/NewsDescription"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>
+
